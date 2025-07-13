@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Calculator, Sun, Zap, DollarSign, Home, MapPin, TrendingUp, Shield, Leaf, Mail, Phone, MapIcon } from 'lucide-react';
 
 const SolarCalculator = () => {
@@ -300,7 +300,7 @@ const SolarCalculator = () => {
     };
 
     try {
-      const response = await fetch(webhookUrl, {
+      await fetch(webhookUrl, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
